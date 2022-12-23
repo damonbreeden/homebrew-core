@@ -11,7 +11,9 @@ class Ext2fuse < Formula
 
   depends_on "e2fsprogs"
   depends_on "libfuse@2"
-  depends_on :linux # on macOS, requires closed-source macFUSE
+  # disabling depend on linux in my branch
+  # see https://github.com/Homebrew/homebrew-core/pull/64491 and https://github.com/gerard/ext4fuse/issues/74
+  # depends_on :linux # on macOS, requires closed-source macFUSE
 
   # Fix build failure because of missing argument to open() Linux.
   # Patch submitted upstream to SourceForge page:

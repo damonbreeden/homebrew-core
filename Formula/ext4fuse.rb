@@ -11,8 +11,10 @@ class Ext4fuse < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "libfuse@2"
-  depends_on :linux # on macOS, requires closed-source macFUSE
+  # disabling depend on linux in my branch
+  # see https://github.com/Homebrew/homebrew-core/pull/64491 and https://github.com/gerard/ext4fuse/issues/74
+  # depends_on "libfuse@2"
+  # depends_on :linux # on macOS, requires closed-source macFUSE
 
   def install
     system "make"
